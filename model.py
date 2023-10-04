@@ -115,8 +115,6 @@ class BiLSTM(nn.Module):
         # print('dfghj:', x.shape)
         output, (h, c) = self.lstm(x)  # output, (h, c)
         # print(output.shape)
-        # h[-2]（正向传播得到最深的那一个隐藏层结果）
-        # h[-1]（反向传播得到最深的那一个隐藏层结果）
         output = torch.cat((h[-2], h[-1]), -1)
         # print(output.shape)
         output = F.relu(output)
