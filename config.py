@@ -35,7 +35,7 @@ def load_args():
     parser.add_argument('--embed_dim', type=int, default=768)
 
     # parameter
-    parser.add_argument('--scale', type=float, default=0.002) # 加载数据的比例
+    parser.add_argument('--scale', type=float, default=1)
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--num_epochs', type=int, default=2)
     
