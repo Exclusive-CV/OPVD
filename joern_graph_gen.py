@@ -1,5 +1,11 @@
-#encoding=utf-8
-import os, sys
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May  8 18:29:08 2023
+
+@author: 27812
+"""
+
+import os
 import glob
 import argparse
 from multiprocessing import Pool
