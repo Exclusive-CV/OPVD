@@ -1,7 +1,7 @@
 # OPVD: Optimizable Prompt Learning for Code Vulnerability Detection
 Hi there, welcome to this page!
 
-The page contains the code  used in the paper.
+The page contains the code  used in the paper (OPVD: Optimizable Prompt Learning for Code Vulnerability Detection).
 
 ### Requirements:
 * Pytorch <br>
