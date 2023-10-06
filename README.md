@@ -1,2 +1,10 @@
 # OPVD: Optimizable Prompt Learning for Code Vulnerability Detection
-The code was tested on Ubuntu 20.04.3 LTS and Windows 11 using Python3.8 and Pytorch 2.0.0
+Hi there, welcome to this page!
+
+The page contains the code  used in the paper.
+
+Requirements:
+Pytorch
+torch_geometric
+Python >= 3.8
+Transformers
