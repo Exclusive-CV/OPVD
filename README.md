@@ -4,7 +4,7 @@ Hi there, welcome to this page!
 The page contains the code  used in the paper.
 
 Requirements:
-Pytorch
-torch_geometric
+## Pytorch
+## torch_geometric
 Python >= 3.8
 Transformers
