@@ -5,6 +5,6 @@ The page contains the code  used in the paper.
 
 ### Requirements:
 * Pytorch <br>
-torch_geometric <br>
-Python >= 3.8 <br>
-Transformers <br>
+* torch_geometric <br>
+* Python >= 3.8 <br>
+* Transformers <br>
