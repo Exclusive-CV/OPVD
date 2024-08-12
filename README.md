@@ -4,7 +4,7 @@ The page contains the code  used in the paper, "Fine-Tuning Pre-trained Model wi
 Prompt Learning for Code Vulnerability Detection".
 
 ### Requirements:
+* Python >= 3.8 <br>
 * Pytorch <br>
 * torch_geometric <br>
-* Python >= 3.8 <br>
 * Transformers <br>
