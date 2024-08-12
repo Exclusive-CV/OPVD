@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jun 13 20:36:35 2023
-
 @author: 27812
 """
 
@@ -97,13 +95,13 @@ def train(train_graph, train_code, prompt_vec):
             
             loss = criterion(out, y)  # Compute the loss.
     
-        # loss.backward()  # Derive gradients.
-        # optimizer.step()  # Update parameters based on gradients. 
+        loss.backward()  # Derive gradients.
+        optimizer.step()  # Update parameters based on gradients. 
         
         # 半精度
-        gradscaler.scale(loss).backward()
-        gradscaler.step(optimizer)
-        gradscaler.update()
+        # gradscaler.scale(loss).backward()
+        # gradscaler.step(optimizer)
+        # gradscaler.update()
         
         # print(out.argmax(dim=1))
         # print(y)
@@ -271,9 +269,6 @@ if __name__ == '__main__':
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epochs, eta_min=1e-3)   
     criterion = torch.nn.CrossEntropyLoss()
     
-    # 在训练最开始之前实例化一个GradScaler对象
-    gradscaler = torch.cuda.amp.GradScaler()
-    autocast = torch.cuda.amp.autocast
     
     best_acc = 0.0
     
@@ -283,6 +278,7 @@ if __name__ == '__main__':
         train_loss, train_acc = train(train_graph, train_code, prompt_vec)
         valid_loss, valid_acc, valid_prec, valid_recall, valid_f1 = test(valid_graph, valid_code, prompt_vec)
         test_loss, test_acc, test_prec, test_recall, test_f1 = test(test_graph, test_code, prompt_vec)
+        
         print('Cur_lr: {:.4f}'.format(lr_scheduler.get_last_lr()[0]))
         print(f'Epoch: {epoch:03d}, Train Loss: {train_loss:.3f}, Valid Loss: {valid_loss:.3f}, Train Acc: {train_acc:.2f}, Valid Acc: {valid_acc:.2f}')
         print(f'Test Acc: {test_acc:.2f}, Test Prec: {test_prec:.2f}, Test Recall: {test_recall:.2f}, Test F1: {test_f1:.2f}')
