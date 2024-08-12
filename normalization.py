@@ -18,7 +18,6 @@ def pro_one_file(filepath):
             new_lines.append(new_text)
     return new_lines
 
-# 删除多余的换行符和字符串之间的空格
 path = "./dataset/codes/train"
 setfolderlist = os.listdir(path)
 for setfolder in setfolderlist:
