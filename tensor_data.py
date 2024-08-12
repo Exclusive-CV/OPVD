@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jun 19 21:37:41 2023
-
 @author: 27812
 """
 
@@ -130,17 +128,3 @@ print('Finish_Preprocessing')
 
 run_time = run_time(begin_time)
 print("Run Time: ", time.strftime("%H:%M:%S", time.gmtime(run_time)))   
-
-# =============================================================================
-# 查看列表中所有字符串的长度分布
-# import collections
-# import matplotlib.pyplot as plt
-# lengths = [len(string) for string in code]
-# counter = collections.Counter(lengths)
-# 
-# # 绘制直方图
-# plt.bar(counter.keys(), counter.values())
-# plt.xlabel('Length of string')
-# plt.ylabel('Frequency')
-# plt.show()
-# =============================================================================
