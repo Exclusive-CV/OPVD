@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 14 14:57:50 2023
-
 @author: 27812
 """
 
@@ -36,8 +34,8 @@ def load_args():
 
     # parameter
     parser.add_argument('--scale', type=float, default=1)
-    parser.add_argument('--batch_size', type=int, default=16)
-    parser.add_argument('--num_epochs', type=int, default=2)
+    parser.add_argument('--batch_size', type=int, default=32)
+    parser.add_argument('--num_epochs', type=int, default=10)
     
     parser.add_argument('--lr', type=float, default=1e-2)
     parser.add_argument('--momentum', type=float, default=0.9)
